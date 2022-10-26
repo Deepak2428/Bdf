@@ -1,0 +1,610 @@
+html
+{
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #E9ECEF;
+}
+
+
+/************ sign-in page****************/
+
+
+div.topbar
+{
+    background-image:linear-gradient(rgb(34, 34, 110),rgb(43, 43, 196));
+
+}
+div.topbar div.row div.col-md-2 img
+{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+div.topbar div.row div.col-md-10 h1,h3
+{
+    color: azure;
+    line-height: 30px;
+    margin-top: 2rem;
+}
+
+div.topbar div.row div.col-2
+{
+    text-align: center;
+}
+
+div.signin-portal
+{
+    margin-top: 10px;
+}
+
+div.signin-portal div.row div.col-sm-12-md-8 div.jumbotron.jumbotron-fluid
+{
+    padding-bottom: 30px;
+    padding-top:20px;
+}
+div.signin-portal div.row  div.col-8.signin
+{
+    max-width: 490px;
+}
+div.signin-portal div.row div.col-8.signin div.card div.card-body
+{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+div.signin-portal div.row div.col-8.signin div.card div.card-body img.img-fluid.signin-icon
+{
+    padding:8px 10px 30px 8px;
+    height:170px;
+    width:150px;
+}
+
+div.signin-portal div.row div.col-8.signin div.card div.card-body form input.btn.signin
+{
+    background-color: rgb(199, 51, 6);
+    color:azure;
+    border-radius: 3px;
+    margin-top: 2rem;
+    font-size: 20px;
+    padding:10px 80px 10px 80px ;
+    max-width: 250px;
+}
+
+div.signin-portal div.row div.col-8.signin a.signup
+{
+    display:block;
+    text-align: center;
+    text-decoration:none;
+    margin-top: 5%;
+}
+
+div.signin-portal div.row div.col-8.signin div.card div.card-body form div.form-group
+{
+    
+    max-width: 300px;
+    padding:10px;
+}
+
+
+
+/*********mobile*********/
+@media (max-width: 1000px) {
+
+    div.topbar div.row
+    {
+        text-align: center;
+    }
+    div.topbar div.row div.col-md-2
+    {
+        margin:0;
+    }
+
+    div.row
+    {
+        text-align: center;
+    }
+
+    div.topbar div.row div.col-md-10 div.row div.col-sm-12 
+    {
+        text-align: center;
+    }
+    div.topbar div.row div.col-md-10 h1,h3
+    {
+        line-height: 50px;
+        margin-left: 1rem;
+    }
+    div.topbar div.row div.col-md-2{
+        margin-left: 1rem;
+    }
+
+    div.topbar div.row div.col-md-10 ul li.dropdown
+    {
+        display:flex;
+        font-size: 20px;
+        text-align: center;
+    }
+    div.topbar div.row div.col-md-10 ul li.left
+    {
+        display:none;
+    }    
+    div.topbar div.row div.col-md-10 div.row div.col-sm-12
+    {
+        text-align: center;
+    }
+    
+}
+
+
+img.college-logo
+{
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 4px -5px 16px 6px rgba(0,0,0,0.75);
+}
+
+
+
+div.signin-portal div.row div.col-8.signin div.card
+{
+    opacity: 0.78;
+    
+    background-color:rgb(255, 253, 250);
+}
+
+div.signin-portal
+{
+    margin-bottom: 3%;
+}
+
+
+
+
+
+/*************** sign-up page****************/
+
+
+div.signup-portal div.row div.col-sm-12-md-8 div.jumbotron.jumbotron-fluid
+{
+    background-color: transparent !important;
+    padding-bottom: 0px;
+    padding-top:5px;
+}
+div.signup-portal div.row
+{
+    margin-top: 30px;
+}
+
+div.signup-portal div.row div.col-8 div.card div.card-body
+{
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+
+
+div.signup-portal div.row div.col-8 div.card div.card-body form div.form-group
+{
+    text-align: center;
+}
+div.form-group
+{
+    max-width: 380px;
+    margin:auto;
+    margin-top: 1rem;
+}
+
+
+div.signup-portal div.row div.col-8 div.card
+{
+    text-align: center;
+    border-radius: 7px;;
+}
+
+div.signup-portal div.row div.col-8
+{
+    max-width: 580px;
+}
+
+
+div.signup-portal div.row div.col-8 div.card div.card-body form input.btn.register
+{
+    background-color: rgb(199, 51, 6);
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-top: 2rem;
+    padding:10px 80px 10px 80px ;
+    max-width: 250px;;
+}
+
+div.topbar div.row div.col-md-10 a
+{
+    display: block;
+    text-align:right;
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+    margin-right: 2%;
+}
+
+div.topbar div.row div.col-md-10 a:hover{
+    color:brown;
+    transition: 0.7s;
+}
+
+div.signup-portal div.row div.col-8 div.card
+{
+    opacity: 0.78;
+    
+    background-color:rgb(255, 243, 224);
+}
+
+div.signup-portal
+{
+    margin-bottom: 3%;
+}
+
+
+
+
+/***************admin login*******************/
+
+
+
+div.mid div.row div.col-sm-12-md-8 div.card
+{
+    opacity: 0.78;
+    
+    background-color:rgb(255, 243, 224);
+}
+
+
+div.mid div.row div.col-sm-12-md-8 div.card div.card-body form input.btn.signin
+{
+    background-color: rgb(199, 51, 6);
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-top: 2rem;
+    padding:10px 80px 10px 80px ;
+    max-width: 250px;;
+}
+div.mid
+{
+    margin-top:3rem;
+}
+div.mid div.row div.col-sm-12-md-8 div.card div.card-body form div.form-group
+{
+    width: 380px;;
+    margin: auto;
+    padding:10px;
+}
+
+
+div.mid div.row div.col-sm-12-md-8 div.card div.card-body img.logo
+{
+    margin:auto;
+    height:150px;
+    width:150px;
+}
+
+div.mid div.row div.col-sm-12-md-8 div.card
+{
+    text-align: center;
+    border-radius: 7px;;
+}
+
+div.mid div.row div.col-sm-12-md-8 div.jumbotron.jumbotron-fluid
+{
+    background-color: none;;
+    padding-bottom: 0px;
+    padding-top:5px;
+}
+
+/************page-1****************/
+
+div.mid-page1 div.row div.col-sm-12-md-10 div.card 
+{
+    background-color: #E9ECEF;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;;
+    box-shadow: 0px 0px 38px -4px rgba(220,182,250,0.61);
+}
+
+div.mid-page1 div.row div.col-sm-12-md-10 div.card div.card-body form.grad
+{
+    display:inline;
+    padding:20px;    
+}
+
+div.mid-page1 div.row div.col-sm-12-md-10 div.card div.card-body  input.btn
+{
+    
+    background-color: rgb(199, 51, 6);
+    display: inline;
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    margin:auto;
+    padding:auto;
+    max-width: 200px;;
+}
+
+div.mid-page1 div.row div.col-sm-12-md-10 div.card div.card-body div.jumbotron.jumbotron-fluid
+{
+    margin-bottom: 0px;;
+}
+
+
+
+
+
+/************** Graduation course****************/
+
+
+div.row div.col-sm-12-md-11 div.ugcourses h3
+{
+    color:azure;
+    background-color:rgb(23, 23, 82);
+    width: 100%;
+    padding:20px;
+}
+
+div.row div.col-sm-12-md-11  form input.btn
+{
+    
+    background-color: rgb(199, 51, 6);
+    display: inline;
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: auto;
+    padding:10px;
+    max-width: 200px;;
+}
+
+div.row div.col-sm-12-md-11 form
+{
+    text-align: center;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+}
+
+div.row div.col-sm-12-md-11 div.jumbotron.jumbotron-fluid
+{
+    margin-bottom:0;
+    padding-bottom: 5px;;
+}
+
+
+
+
+
+
+
+/************ admission-form***************/
+
+
+div.row div.col-9 div.jumbotron.jumbotron-fluid
+{
+    text-align: center;
+    padding:0;
+    margin:0;
+    margin-top:1rem;
+}
+
+div.row div.col-9 form div.form-group
+{
+    
+    margin:0;
+    margin-top: 1rem; 
+}
+
+
+div.row div.col-9 form div.row input.btn
+{
+    background-color: rgb(199, 51, 6);
+    display: inline;
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    margin: auto;
+    padding:7px 20px 7px 20px;
+    max-width: 200px;;
+}
+div.row div.col-9 form div.row
+{
+    margin-top: 1.5rem;
+}
+
+
+
+/************* document-page*********/
+
+
+
+
+div.row div.col-9 ol li
+{
+    text-align: left;
+}
+
+div.row div.col-9 ol li h6 
+{
+    text-align: center;
+}
+
+
+div.row input.btn
+{
+    background-color: rgb(199, 51, 6);
+    display: block;
+    margin:auto;
+    color:azure;
+    border-radius: 3px;
+    font-size: 20px;
+    padding:7px 20px 7px 20px;
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/*********** Admin-page-1***********/
+
+
+
+div.topbar div.row div.col-md-10 ul
+{
+    list-style: none;
+    width: 100%;
+}
+
+div.topbar div.row div.col-md-10 ul li.right
+{
+    color:azure;
+    font-size: 20px;
+    float:right;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    
+}
+
+div.topbar div.row div.col-md-10 ul li.left
+{
+    color:azure;
+    font-size: 30px;
+    float:left;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom: 10px;
+    margin-right: 1rem;
+}
+
+div.topbar div.row div.col-md-10 ul li.dropdown
+{
+    display:none;
+}
+
+
+
+
+
+
+/**************** view applications************/
+
+
+table
+{
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+table thead tr td
+{
+    
+    padding: 10px 30px 10px 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    color:azure;
+}
+
+td
+{
+    padding:10px 20px 10px 20px;
+
+}
+tbody tr:nth-child(odd)
+{
+    background-color: rgb(219, 213, 213);
+}
+table thead
+{
+    background-color: rgb(23, 23, 82);
+}
+
+
+/**********HOME********/
+
+
+div.row div.col-3 ul li
+{
+    padding:20px;
+}
+
+
+div.row div.col-3:hover
+{
+    font-size: 30px;
+    transition: 0.5s;
+    margin-bottom:10px;
+}
+
+div.row div.col-md-4 h2:hover
+{
+    letter-spacing: 10px;
+    transition: 0.6s;
+    color:rgb(243, 137, 76);
+}
+div.row div.col-3 ul li:hover
+{
+    font-weight: bolder;
+    font-size: 30px;
+    color:blue;
+}
+
+div.row div.col-md-3 img
+{
+    box-sizing: border-box;
+    border-radius: 12px;
+    border:solid rgb(187, 177, 177);
+    padding:5px;
+}
+div.row div.col-md-3
+{
+    transition: width=2s,height=2s;
+}
+div.row div.col-md-3 img:hover
+{
+    padding:10px 20px 10px 20px;
+    transition: 0.6s;
+}
+
+footer
+{
+    color:azure;
+    background-image:linear-gradient(rgb(34, 34, 110),rgb(43, 43, 196));
+}
+footer ul
+{
+    list-style: none;
+}
+footer div.row div.col-4
+{
+    margin:0;
+    text-align: center;
+}
+footer a
+{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+footer div.row div.col-4 ul li
+{
+    float:left;
+    padding:20px;
+}
