@@ -2,10 +2,11 @@
 
 session_start();
 
-if(!isset($_SESSION['username'])) // if user has logged out the session variable is destroyed.Make user login again
+if(!isset($_SESSION['username'])) // if user has logged out go back to login page.
 {
     header('location:studentLogin.php');
 }
+
 
 $servername = "localhost";
 $username = "root";
@@ -22,11 +23,12 @@ if ($connection->connect_error) {
 
 $email=$_SESSION['username'];
 
-$sql_statement="SELECT * FROM `registration` WHERE `Email` = '$email'"; // to print user full name on nav bar
+$sql_statement= "SELECT * FROM `registration` WHERE `Email` = '$email'";
 
 $result=mysqli_query($connection, $sql_statement);
 
 $row=mysqli_fetch_assoc($result);
+
 
 echo "
 <!DOCTYPE html>
@@ -155,21 +157,25 @@ echo "
                         <div class='jumbotron jumbotron-fluid'>
                             <div class='container'>
                                 <h1 class='display-4'>Admissions</h1><br>
-                                <p class='lead'>Educating children is both a great responsibility and a great privilege.
-                                 We need to put a lot of effort into making it work. A school where all students are 
-                                 treated equally. A place where topper in  math and science are not regarded as superior
-                                 to those who excel in other subjects. A talented athlete is given numerous opportunities 
-                                 to play at the highest level and represent the country. A school with a large playground, 
-                                 numerous activities in and out of the classroom, and <Strong>'NO UNHEALTHY COMPETITION'</strong>. An art of  
-                                 state infrastructure that would instil a sense of pride and privilege in all of our young 
-                                 dynamic minds living in remote rural India. Our ultimate goal is for every student to outgrow us.
-                                 We want them to be ready and able to take the next step, knowing who they are and what they excel
-                                 at. Ours is the caring preparation, there is to go out and make a difference.</p>
+                                <p class='lead'>Educating children is both a great responsibility and a 
+                                great privilege. We need to put a lot of effort into making it work. 
+                                A school where all students are treated equally. A place where topper 
+                                in  math and science are not regarded as superior to those who excel in 
+                                other subjects. A talented athlete is given numerous opportunities to 
+                                play at the highest level and represent the country. A school with a 
+                                large playground, numerous activities in and out of the classroom, and 
+                                <strong>'NO UNHEALTHY COMPETITION.'</strong> An art of  state 
+                                infrastructure that would instil a sense of pride and privilege in all 
+                                of our young dynamic minds living in remote rural India. Our ultimate 
+                                goal is for every student to outgrow us. We want them to be ready and 
+                                able to take the next step, knowing who they are and what they excel at. 
+                                Ours is the caring preparation, there is to go out and make a difference.
+                                </p>
                             </div>
                         </div>
                        
-                        <form class='grad' action='graduation.php'>
-                            <input class='btn' type='submit' value='Apply Now   🚀'>
+                        <form class='grad' action='./admission-form.php'>
+                            <input class='btn' type='submit' value='Apply Now 🚀'>
                         </form>
 
                     </div>

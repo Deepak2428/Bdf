@@ -63,7 +63,7 @@ $checkCredential=$_GET['error'];
                             </div>
 
                             <input class="btn signin" type="submit" value="LOGIN">
-                            <a style='text-decoration:none' href='forget.php'>FORGOT PASSWORD ?</a>
+                            <a href="./forget.php"  style="text-decoration:none;">Forgot Password </a>
                             <?php
                                 if($checkCredential=='nosuchuser')
                                 {
@@ -84,6 +84,9 @@ $checkCredential=$_GET['error'];
             
         </div>
     </div>
+
+
+   
   </body>
 
 
