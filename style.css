@@ -255,7 +255,7 @@ div.signup-portal
 div.mid div.row div.col-sm-12-md-8 div.card
 {
     opacity: 0.78;
-    background-color:rgb(255, 243, 224);
+    background-color: #E9ECEF;
 }
 
 
@@ -477,7 +477,7 @@ div.topbar div.row div.col-md-10 ul li.right
 div.topbar div.row div.col-md-10 ul li.left
 {
     color:azure;
-    font-size: 30px;
+    font-size: 20px;
     float:left;
     padding-top:10px;
     padding-left:20px;

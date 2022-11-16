@@ -7,6 +7,23 @@ if(!isset($_SESSION['username']))
     header("location:StudentLogin.php");
 }
 
+$servername = "localhost";
+$username="root";
+$password="root";
+$dbname="admission_portal";
+
+$email=$_SESSION['username'];
+
+$connection= new mysqli($servername,$username,$password,$dbname);
+
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+  }
+
+  $sql_statement="UPDATE `registration` SET `Status`='Pending'  where `Email`='$email'";
+  mysqli_query($connection,$sql_statement);
+  mysqli_close($connection);
+
 ?>
 
 <!DOCTYPE html>

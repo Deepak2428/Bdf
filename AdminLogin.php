@@ -1,7 +1,7 @@
 
 <?php
 
-    $credential=$_GET['user'];
+    $credential=$_GET['error'];
 
 
 ?>
@@ -62,9 +62,13 @@
     
                             <input class="btn signin" type="submit" value="LOGIN">
                             <?php
-                                if($credential=='no')
+                                if($credential=='nosuchadmin')
                                 {
-                                    echo"<h3 class='lead' style='color:Red'>WRONG CREDENTIALS</h3>";
+                                    echo"<h3 class='lead' style='color:Red'>WRONG USERNAME</h3>";
+                                }
+                                if($credential=='wrongpassword')
+                                {
+                                    echo"<h3 class='lead' style='color:Red'>WRONG PASSWORD</h3>";
                                 }
                             ?>
                         </form>

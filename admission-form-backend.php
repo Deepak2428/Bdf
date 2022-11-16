@@ -8,29 +8,29 @@ if(!isset($_SESSION['username']))
 }
 
 
-$formdata=json_decode($_POST['data']);
+$firstname=$_POST['first-name'];
+$lastname=$_POST['last-name'];
+$fathersname=$_POST['fathers-name'];
+$mothersname=$_POST['mothers-name'];
+$mobileno=$_POST['mob-no'];
+$alternate_mob_no=$_POST['alternate-mob-no'];
+$email=$_POST['email'];
+$gender=$_POST['gender'];
+$class=$_POST['class'];
+$dob=$_POST['Dob'];
+$school=$_POST['SchoolName'];
+$tenth=$_POST['Xth-score'];
+$address=$_POST['village'].", ".$_POST['city'].", ".$_POST['district'].", ".$_POST['state'].", ".$_POST['pincode'];
+$blood_group=$_POST['blood-group'];
+$aadhar_card=$_POST['aadharnumber'];
 
-$firstname=$formdata->firstname;
-$lastname=$formdata->lastname;
-$fathersname=$formdata->fathersname;
-$mothersname=$formdata->mothersname;
-$mobileno=$formdata->mobilenumber;
-$alternate_mob_no=$formdata->alternate_mobile_no;
-$email=$formdata->email;
-$gender=$formdata->gender;
-$class=$formdata->class;
-$dob=$formdata->dob;
-$school=$formdata->school;
-$tenth=$formdata->tenthscore;
-$address=$formdata->address;
-$blood_group=$formdata->bloodgroup;
-$aadhar_card=$formdata->aadharnumber;
+$student_id=0;
 
-$student_id=1000;
 $servername="localhost";
 $username="root";
 $password="root";
 $dbname="admission_portal";
+
 
 if($class=="XI"||$class=="XII")
 {
@@ -40,6 +40,7 @@ else
 {
   $_SESSION["tenth"]="false";
 }
+
 //connecting database
 
 
@@ -51,13 +52,12 @@ if($connection->connect_error)
     print("Connection failed: " . $connection->connect_error);
 }
 
+
 $sql_statement="INSERT INTO `admissions` (`First_Name`, `Last_Name`, `Fathers_Name`, `Mothers_Name`, 
 `Mobile_Number`, `Alternate_Mobile_Number`, `Email`, `Gender`, `Class`, `DOB`, `Address`, `Blood_Group`,
  `Aadhar_Number`, `Status`, `Student_id`,`School`, `Xth-Score`) VALUES ('$firstname', '$lastname', '$fathersname', 
  '$mothersname','$mobileno', '$alternate_mob_no', '$email', '$gender', '$class', '$dob', '$address', '$blood_group', '$aadhar_card', 
  'Pending','$student_id','$school','$tenth')";
-
-
 
 
 if  (mysqli_query($connection, $sql_statement)) {
@@ -76,5 +76,6 @@ if  (mysqli_query($connection, $sql_statement)) {
   
   mysqli_close($connection);
 
+  print("successfully inserted");
 
 ?>

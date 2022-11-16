@@ -23,12 +23,12 @@ if ($connection->connect_error) {
 
 $email=$_SESSION['username'];
 
-$sql_statement= "SELECT * FROM `registration` WHERE `Email` = '$email'";
-
+$sql_statement= "SELECT * FROM `admissions` WHERE `Email` = '$email'";
+$sql_statement2="SELECT * FROM `registration` WHERE `Email` = '$email'";
 $result=mysqli_query($connection, $sql_statement);
-
+$result2=mysqli_query($connection,$sql_statement2);
 $row=mysqli_fetch_assoc($result);
-
+$row2=mysqli_fetch_assoc($result2);
 
 echo "
 <!DOCTYPE html>
@@ -52,7 +52,7 @@ echo "
             <div class='col-md-10'>
                 <h1>NAVADHA SCHOOL</h1>
                 <h3>ONLINE PORTAL</h3>
-                <h3 class='lead'>WELCOME  :  ".$row['First_Name']." ".$row['Last_Name']."</h3>
+                <h3 class='lead'>WELCOME  :  ".$row2['First_Name']." ".$row2['Last_Name']."</h3>
                 <a href='Logout.php'>Logout</a>
             </div>
         </div>
@@ -101,7 +101,7 @@ echo "
                                 <p class='lead'>Your Application is Accepted. Please Visit the University
                                 for Document verification and fee deposition.</p>
                                 <br>
-                                <p class='lead'> Your <b>APPLICATION NUMBER IS : ".$row['Student_ID']."</b>. <br>It Will Be Asked
+                                <p class='lead'> Your <b>APPLICATION NUMBER IS : ".$row['Student_id']."</b>. <br>It Will Be Asked
                                 During Verification Of Documents.
                             </div>
                         </div>

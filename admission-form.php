@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +14,7 @@
     <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./Bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     
@@ -37,7 +43,7 @@
                 </div>
             </div>
 
-            <form action="#" method="post" onsubmit="formValidate(event)">
+            <form  id="form" name="form">
 
                 <div class="form-group">
                     <h6>First Name:</h6><input  class="form-control" id="fname" type="text" name="first-name" placeholder="First Name" required><span id="fname-error"></span>
@@ -64,7 +70,7 @@
                 </div> 
 
                 <div class="form-group">
-                    <h6>Email:</h6><input class="form-control" type="text" id="email" name="email" placeholder="Email" required>
+                    <h6>Email:</h6><input class="form-control" type="text" id="email" name="email" value="<?php echo $_SESSION['username']; ?>" readonly="readonly">
                 </div> 
 
                 <div class="form-group">
@@ -169,7 +175,7 @@
         
         function addMarks()  
         {
-            alert("yo");
+           
             var value=document.getElementById("class").value;
             if(value=='XI' || value=='XII')
             {
@@ -195,7 +201,7 @@
             }
         }
 
-        function formValidate(event)
+        $("#form").on('submit', function(event)
         {
             var errorflag=false;
             event.preventDefault();
@@ -320,37 +326,21 @@
                 var x=document.getElementById("aadhar-error");
                 x.innerHTML="";
             }
-
-            if (errorflag==false)
+            if(errorflag==false)
             {
-                var formdata={};
-                formdata.firstname=fname;
-                formdata.lastname=lname;
-                formdata.fathersname=fathersname;
-                formdata.mothersname=mothersname;
-                formdata.mobilenumber=mobile_no;
-                formdata.alternate_mobile_no=alternate_mobile_no;
-                formdata.email=email;
-                formdata.gender=gender;
-                formdata.class=Class;
-                formdata.dob=dob;
-                formdata.school=school;
-                formdata.tenthscore=tenthscore;
-                formdata.address=village+", "+city+", "+district+", "+state+", "+pincode;
-                formdata.bloodgroup=bloodgroup;
-                formdata.aadharnumber=aadharCard;
-                $.ajax(
-                {
-                    url:"admission-form-backend.php",
-                    method:"post",
-                    data: {data: JSON.stringify(formdata)},
-                    success:function(res){
-                        window.location.href="docs-input.php"; // on success redirecting to next page. 
+                $.ajax({
+                    url:'admission-form-backend.php',
+                    type:'post',
+                    data:$("#form").serialize(),
+                    success:function(res)
+                    {
+                        //alert(res);
+                        window.location.href="docs-input.php";
                     }
                 })
             }
 
-        }
+        })
 
     </script>
 

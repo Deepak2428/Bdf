@@ -36,8 +36,8 @@ else{
   }
 
   $sql_statement= "INSERT INTO `registration`(`First_Name`, `Last_Name`, `Email`, `Mobile`, `Password`,
-   `Re-Password`)
-    VALUES ('$firstname','$lastname','$email','$mobileno','$pass1','$pass2')";
+   `Re-Password`,`Status`)
+    VALUES ('$firstname','$lastname','$email','$mobileno','$pass1','$pass2','')";
 
   if  (mysqli_query($connection, $sql_statement)) {
     echo "New record created successfully";
